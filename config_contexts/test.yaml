@@ -4,7 +4,7 @@ _metadata:
   description: Testing from repo
   is_active: True
   tags:
-    - slug: HQ1
+    - slug: hq1
 static_routes:
   - target: 10.0.0.1
     next_hop: ethernet1/1
