@@ -29,8 +29,13 @@ class NrJob(Job):
     """
     Nautobot Job
     """
+    
+    def __init__(self):
+        super().__init__()
+        self.data = None
+        self.commit = None
 
-    def run(self):
+    def run(self, data, commit):
         """
         Run Nautobot Job
         """
