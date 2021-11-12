@@ -11,15 +11,15 @@ class TestJob(Job):
     Test job
     """
 
-    user_email = StringVar(
-        description="User email",
-        label="User email",
+    test_string = StringVar(
+        description="Just a test string",
+        label="Just a test string",
         required=True,
     )
     
     class Meta:
         name = "Test Job"
-        description = "Just a test job to get and print the email address"
+        description = "Just a test job to get and print the test string"
         
     def __init__(self):
         super().__init__()
@@ -34,6 +34,6 @@ class TestJob(Job):
         self.data = data
         self.commit = commit
         
-        self.log_info(f"Email address: {self.data['user_email']}")
+        self.log_info(obj= None, message=f"Email address: {self.data['test_string']}")
         
     
