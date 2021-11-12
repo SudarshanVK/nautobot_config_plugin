@@ -4,7 +4,7 @@ import pynautobot
 
 from datetime import datetime
 
-from nautobot.extras.jobs import Job, MultiObjectVar, BooleanVar, StringVar, IntegerVar, FloatVar, DateVar, TimeVar, \
+from nautobot.extras.jobs import Job, MultiObjectVar, BooleanVar, StringVar, IntegerVar, FloatVar, DateVar, TimeVar
 from nautobot.extras.models import Tag
 from nautobot.dcim.models import Device, DeviceRole, DeviceType, Manufacturer, Site, Platform, Region, Rack, RackGroup
 from nautobot.tenancy.models import Tenant, TenantGroup
