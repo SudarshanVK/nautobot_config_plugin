@@ -21,7 +21,6 @@ from nornir_napalm.plugins.tasks import napalm_get
 
 InventoryPluginRegister.register("nautobot-inventory", NautobotORMInventory)
 
-email = "sudarshan.net09@gmail.com"
 
 class TestJob(Job):
     """
@@ -30,17 +29,27 @@ class TestJob(Job):
 
     user_email = StringVar(
         description="User email",
-        label="User email, eg {email}",
+        label="User email",
+        required=True,
     )
     
     class Meta:
         name = "Test Job"
         description = "Just a test job to get and print the email address"
         
-    def run(self):
+    def __init__(self):
+        super().__init__()
+        self.data = None
+        self.commit = None
+        
+    def run(self, data, commit):
         """
         Run the job
         """
-        self.log_info(f"Email address: {self.user_email}")
+        
+        self.data = data
+        self.commit = commit
+        
+        self.log_info(f"Email address: {self.data['user_email']}")
         
     
