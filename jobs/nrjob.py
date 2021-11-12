@@ -41,5 +41,3 @@ class NrJob(Job):
         """
         nr = init_nornir()
         self.log_info(obj= None, message=f"{nr}")
-
-        return result

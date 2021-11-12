@@ -1,4 +1,4 @@
-from nautobot.extras.jobs import Job, ChoiceVar, StringVar
+from nautobot.extras.jobs import Job, ChoiceVar, Stringvar
 
 
 class TestJob(Job):
