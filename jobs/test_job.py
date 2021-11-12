@@ -1,9 +1,4 @@
-# import logging
-# # importing pynautobot
-# import pynautobot
-
-# from datetime import datetime
-from nautobot.extras.jobs import Job, ChoiceVar, Stringvar
+from nautobot.extras.jobs import Job, ChoiceVar, StringVar
 
 
 class TestJob(Job):
