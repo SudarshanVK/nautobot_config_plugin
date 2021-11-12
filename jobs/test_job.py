@@ -1,25 +1,9 @@
-import logging
-# importing pynautobot
-import pynautobot
+# import logging
+# # importing pynautobot
+# import pynautobot
 
-from datetime import datetime
-
-from nautobot.extras.jobs import Job, MultiObjectVar, BooleanVar, StringVar, IntegerVar, FloatVar, DateVar, TimeVar
-from nautobot.extras.models import Tag
-from nautobot.dcim.models import Device, DeviceRole, DeviceType, Manufacturer, Site, Platform, Region, Rack, RackGroup
-from nautobot.tenancy.models import Tenant, TenantGroup
-
-from nornir import InitNornir
-from nornir.core.plugins.inventory import InventoryPluginRegister
-
-from nautobot.dcim.filters import DeviceFilterSet
-
-from nautobot_plugin_nornir.plugins.inventory.nautobot_orm import NautobotORMInventory
-from nautobot_plugin_nornir.constants import NORNIR_SETTINGS
-# from nornir_netmiko.tasks import netmiko_send_command
-from nornir_napalm.plugins.tasks import napalm_get
-
-InventoryPluginRegister.register("nautobot-inventory", NautobotORMInventory)
+# from datetime import datetime
+from nautobot.extras.jobs import Job, ChoiceVar, Stringvar
 
 
 class TestJob(Job):
