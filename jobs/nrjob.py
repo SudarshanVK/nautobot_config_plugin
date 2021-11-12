@@ -17,7 +17,7 @@ def init_nornir():
             "options": {
                 "credentials_class": NORNIR_SETTINGS.get("credentials"),
                 "params": NORNIR_SETTINGS.get("inventory_params"),
-                "queryset": get_job_filter(data),
+                # "queryset": get_job_filter(data),
                 # "defaults": {"now": now},
             },
         },
